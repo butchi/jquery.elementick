@@ -1,0 +1,23 @@
+{
+  "name": "jquery.elementick",
+  "version": "0.1",
+  "authors": [
+    "IWABUCHI Yu(u)ki <k38647@gmail.com>"
+  ],
+  "description": "jQuery Element Ticker Plugin",
+  "main": "jquery.elementick.js",
+  "keywords": [
+    "jQuery",
+    "ticker",
+    "easteregg"
+  ],
+  "license": "MIT",
+  "homepage": "http://butchi.jp/",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
