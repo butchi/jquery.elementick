@@ -15,7 +15,7 @@
             var origVal = node.data;
 
             var timerId = window.setInterval(function() {
-                opts.callback(cnt, node, origVal);
+                opts.step(cnt, node, origVal);
                 cnt++;
             }, opts.duration);
         }
@@ -32,7 +32,7 @@
     $.fn.elementick.defaults = {
         duration: 300,
         nodeType: document.COMMENT_NODE,
-        callback: function(cnt, node, origVal) {
+        step: function(cnt, node, origVal) {
             node.data = node.data.slice(1) + node.data[0];
         }
     };
