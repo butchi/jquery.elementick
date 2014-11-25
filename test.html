@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>elementick test </title>
+</head>
+<body>
+<!--this is a body comment-->
+
+<h1>jquery.elementick </h1>
+
+<p class="sample"><!--hoge hoge-->Thanks<span>, </span>world!</p>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="./js/jquery.elementick.js"></script> 
+<script>
+$(function() {
+    $('body').elementick();
+
+    $('head title').elementick({
+        nodeType: document.TEXT_NODE,
+    });
+
+    $('h1').elementick({
+        nodeType: document.TEXT_NODE,
+        duration: 500
+    });
+
+    $('.sample').elementick({
+        nodeType: document.TEXT_NODE,
+        duration: 1000,
+        position: 1,
+        step: function(i, node, origVal) {
+            if(i % 2) {
+                node.data = origVal;
+            } else {
+                node.data = '';
+            }
+        },
+    });
+});
+</script>
+</body>
+</html>
