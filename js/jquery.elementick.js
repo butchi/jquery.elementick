@@ -1,3 +1,8 @@
+/*
+ *  jquery.elementick
+ *  author: IWABUCHI Yu(u)ki
+ */
+
 ;(function($) {
     'use strict';
 
