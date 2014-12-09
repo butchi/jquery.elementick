@@ -6,6 +6,12 @@
 ;(function($) {
     'use strict';
 
+    /**
+     *  option.duration
+     *  option.nodeType
+     *  option.step {function} callback called for every speps
+     *  option.position {number} action target index in node
+     */
     $.fn.elementick = function(option) {
         var opts = $.extend({}, $.fn.elementick.defaults, option);
 
@@ -17,7 +23,7 @@
 
         function tick(i, node) {
             var cnt = 0;
-            var origVal = node.data;
+            var origVal = node.data; // node's initial data
 
             var timerId = window.setInterval(function() {
                 opts.step(cnt, node, origVal);
@@ -25,10 +31,10 @@
             }, opts.duration);
         }
 
-        if(opts.position === null || opts.position === undefined) {
-            $node.each(tick);
-        } else {
+        if(typeof opts.position === 'number') {
             tick(0, $node.get(opts.position));
+        } else {
+            $node.each(tick);
         }
 
         return this;
