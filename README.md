@@ -10,7 +10,7 @@ jquery.elementick
     ██║  ██╗██║  ██║   ██║   ██║  ██║╚██████╗
     ╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝
 
-    http://www.kayac.com/
+    [http://www.kayac.com/](http://www.kayac.com/)
 
 
 jQuery Element Ticker Plugin
